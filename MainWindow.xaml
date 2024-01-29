@@ -5,31 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="350" FontSize="20">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <WrapPanel Grid.ColumnSpan="2">
-            <Button Margin="2" Content="Navy" Foreground="Navy"/>
-            <Button Margin="2" Content="Blue" Foreground="Blue"/>
-            <Button Margin="2" Content="Aqua" Foreground="Aqua"/>
-            <Button Margin="2" Content="Teal" Foreground="Teal"/>
-            <Button Margin="2" Content="Olive" Foreground="Olive"/>
-            <Button Margin="2" Content="Green" Foreground="Green"/>
-            <Button Margin="2" Content="Lime" Foreground="Lime"/>
-            <Button Margin="2" Content="Yellow" Foreground="Yellow"/>
-            <Button Margin="2" Content="Orange" Foreground="Orange"/>
-            <Button Margin="2" Content="Red" Foreground="Red"/>
-            <Button Margin="2" Content="Maroon" Foreground="Maroon"/>
-            <Button Margin="2" Content="Fuchsia" Foreground="Fuchsia"/>
-            <Button Margin="2" Content="Purple" Foreground="Purple"/>
-            <Button Margin="2" Content="Black" Foreground="Black"/>
-            <Button Margin="2" Content="Silver" Foreground="Silver"/>
-            <Button Margin="2" Content="Gray" Foreground="Gray"/>
-            <Button Margin="2" Content="White" Foreground="White"/>
-        </WrapPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.ColumnSpan="4" x:Name="label_operations" IsEnabled="False" Background="LightYellow" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="13"/>
+        <TextBox Grid.ColumnSpan="4" Grid.Row="1" x:Name="label_result" BorderBrush="Gray" BorderThickness="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="30"/>
+        
+        <Button Grid.Column="0" Grid.Row="2" Content="CE" x:Name="bt_op_clearCurrent" Click="bt_clearClicked"/>
+        <Button Grid.Column="0" Grid.Row="3" Content="7" x:Name="bt_nums_seven" Click="bt_numClicked"/>
+        <Button Grid.Column="0" Grid.Row="4" Content="4" x:Name="bt_nums_four" Click="bt_numClicked"/>
+        <Button Grid.Column="0" Grid.Row="5" Content="1" x:Name="bt_nums_one" Click="bt_numClicked"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="C" x:Name="bt_op_clearAll" Click="bt_clearClicked"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="8" x:Name="bt_nums_eight" Click="bt_numClicked"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="5" x:Name="bt_nums_five" Click="bt_numClicked"/>
+        <Button Grid.Column="1" Grid.Row="5" Content="2" x:Name="bt_nums_two" Click="bt_numClicked"/>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Content="0" x:Name="bt_nums_zero" Click="bt_numClicked"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="&lt;" x:Name="bt_op_clearDigit" Click="bt_clearClicked"/>
+        <Button Grid.Column="2" Grid.Row="3" Content="9" x:Name="bt_nums_nine" Click="bt_numClicked"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="6" x:Name="bt_nums_six" Click="bt_numClicked"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="3" x:Name="bt_nums_three" Click="bt_numClicked"/>
+        <Button Grid.Column="3" Grid.Row="2" Content="/" x:Name="bt_op_divide" Click="bt_operationClicked"/>
+        <Button Grid.Column="3" Grid.Row="3" Content="*" x:Name="bt_op_multiply" Click="bt_operationClicked"/>
+        <Button Grid.Column="3" Grid.Row="4" Content="-" x:Name="bt_op_substract" Click="bt_operationClicked"/>
+        <Button Grid.Column="3" Grid.Row="5" Content="+" x:Name="bt_op_add" Click="bt_operationClicked"/>
+        <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" Content="=" x:Name="bt_op_calculate" Click="bt_operationClicked"/>
     </Grid>
 </Window>
